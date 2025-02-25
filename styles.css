@@ -1,0 +1,270 @@
+
+        *{
+            margin:0;
+            padding:0;
+            text-decoration:none;
+            box-sizing: border-box;
+        }
+        header{
+	font-family: 'Bebas Neue';
+	position:relative;
+	margin:0;
+	font-size: 4em;
+	font-weight:900;
+	color :red;
+	z-index: 1;
+	overflow :hidden;
+    text-align:center;
+
+}
+
+
+@keyframes animate{
+	0%{
+		left:110%;
+
+	}
+	100%{
+		left:-20%;
+		
+	}
+}
+
+header span{
+	color: rgb(34,67,98);
+}
+
+        .navigation{
+            background:crimson;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .navdiv{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+
+        }
+
+        .logo{
+            font-size:55px;
+            font-weight:600;
+            color:white;
+        }
+        li{
+            list-style:none;
+            display:inline-block;
+
+        }
+        li a{
+            color:white;
+            font-size:30px;
+            font-weight:bold;
+            margin-right:25px;
+            padding-top:15px;
+        }
+        button{
+            background-color:black;
+            margin-left:10px;
+            border-radius:10px;
+            float:right;
+            padding:10px;
+            width:90px;
+
+        }
+        button a{
+            color:white;
+            font-weight:bold;
+            font-size:15px;
+        }
+
+        body{
+            background-color: black;
+
+        }
+         
+        .flex-container{
+            width:100%;
+            height:auto;
+            display:flex;
+            flex-direction:row-reverse;
+            flex-wrap:wrap-reverse;
+            justify-content:space-around;
+            margin:30px;
+        }
+        .flex-box{
+            width:200px;
+            height:200px;
+            background:transparent;
+            border: solid black 2px;
+            color:black;
+            font-size:25px;
+            text-align:center;
+            line-height:200px;
+            border-radius:20px;
+        }
+        .intro{
+            font-family:'Lexend Giga';
+            font-size:20px;
+            margin:20px;
+            text-align:left;
+            font-weight:200;
+            color:rgb(50, 112, 165);
+            font-weight: 400;
+        }
+
+        footer{
+            background-color: #111;
+
+        }
+        .footerContainer{
+            width: 100%;
+            padding: 70px 30px 20px;
+
+        }
+        .socialIcons{
+            display:flex;
+            justify-content: center;
+
+        }
+        .socialIcons a{
+            text-decoration:none;
+            padding:10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+
+        }
+        .socialIcons a i{
+            foct-size: 2em;
+            color:black;
+            opacity:0.9;
+        }
+
+        .socialIcons a:hover{
+            color:white;
+            transition:0.5s;
+        }
+
+        .footerNav{
+            margin: 30px 0;
+        }
+
+        .footerNav ul{
+            display:flex;
+            justify-content: center;
+        }
+        .footerNav ul li a{
+            color:white;
+            margin: 20px;
+            text-decoration:none;
+            font-size: 1.3em;
+            opacity: 0.7;
+            transition:0.5s;
+        }
+        .footerNav ul li a:hover{
+            opacity:1;
+        }
+        .navdiv ul li a:hover{
+            color:black;
+        }
+        
+        marquee{
+            color:white;
+            font-family:'Lexend Giga';
+            font-size: 30px;
+        }
+
+        .outerplace{
+            display:flex;
+            justify-content: space-around;
+        }
+        .places{
+            
+            padding:10px;
+            text-align: center;
+        }
+        .places img:hover{
+            opacity:0.5;
+        }
+        
+        .urgent{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .urgent-head{
+            width:100%;
+            font-size: 30px;
+            background-color: bisque;
+            color:#111;
+            font-weight: 700;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .urgent .buttons button {
+            background-color: crimson;
+            color:black;
+            font-size: 30px;
+            border-radius: 10px;
+            width:200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 1000;
+            margin-top:10px;
+
+        }
+
+        .urgent .buttons button a{
+            background-color: crimson;
+            color:black;
+            font-size: 30px;
+            border-radius: 10px;
+            width:200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 1000;
+            margin-top:10px;
+
+        }
+
+        .grid-outline{
+            display:grid;
+            grid-template-columns:repeat(4,1fr); 
+            gap: 20px;
+            margin:20px;
+        }
+
+        .box{
+            height: 300px;
+            border-radius: 30px;
+        }
+
+        .box img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        .box img:hover{
+             /* transform: scale(1.05);  */
+            opacity:0.3;
+
+        }
+        .solution{
+            opacity:0;
+        }
+
+        .solution:hover{
+            opacity:1;
+        }
+
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+
+        

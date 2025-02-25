@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #344a72;
+            font-family:'Roboto';
+        }
+        .signup-box{
+            width:360px;
+            height:620px;
+            margin:auto;
+            background-color: white;
+            border-radius: 3px;
+            text-align:center;
+        }
+        h1{
+            text-align:center;
+            padding-top:15px;
+        }
+        form{
+            width:300px;
+            margin-left:20px;
+        }
+        form label{
+            display:flex;
+            margin-top: 20px;
+            font-size:18px;
+
+        }
+        form input{
+            width: 100%;
+            padding:7px;
+            border: none;
+            border:1px solid gray;
+            border-radius: 6px;
+            outline:none;
+        }
+        .signup-box button{
+            background-color:rgb(46, 186, 146);
+            color:black;
+            width:100px;
+            height:70px;
+            font-size:20px;
+            cursor:pointer;
+            border-radius:10px;
+            border:none;
+        }
+        .signup-box p{
+            width: 320px;
+            height: 35px;
+            margin-top:20px;
+            border:none;
+            background-color: white;
+            color:black;
+            font-size: 16px;
+            text-align:center;
+        }
+        .error-message{
+            color:red;
+            font-size:20px;
+            display:none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+    <h1>Sign Up</h1>
+    <form id="signup-form">
+        <label> First Name</label>
+        <input type="text" placeholder="" required>
+        <label> Last Name</label>
+        <input type="text" placeholder="">
+        <label> Email</label>
+        <input type="email" placeholder="" required>
+        <label> Password</label>
+        <input type="password"id="password" placeholder="" required minlength="6">
+        <label> Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="" required>
+    
+        <button  type="submit" value="Submit">Sign Up</button>
+            <br>
+            <p class="error-message" id="error-message">Passwords do not match!</p>
+    </form>
+    <p> By clicking the Sign Up button, you agree to our<br>
+    <a href="#">Terms and Contitions</a> and <a href="#">Poilicy and Privacy</a>
+    </p>
+</div>
+<br>
+<br>
+
+<script>
+    const form = document.getElementById("signup-form");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirm-password");
+    const errorMessage = document.getElementById("error-message");
+
+    form.addEventListener("submit", function(event) {
+        if (password.value !== confirmPassword.value) {
+            event.preventDefault(); 
+            errorMessage.style.display = "block"; 
+        } else {
+            errorMessage.style.display = "none"; 
+            const confirmSubmission = window.confirm("Are you sure you want to sign up?");
+            if (!confirmSubmission) {
+                event.preventDefault();
+            } else {
+                alert("Sign up successful!");
+            }
+        }
+    });
+</script>
+ 
+</body>
+</html>
