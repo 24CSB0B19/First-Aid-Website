@@ -53,7 +53,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: black;
             color: white;
             display: flex;
             justify-content: center;
@@ -72,7 +72,7 @@
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(8, 0, 0, 0.2);
     max-width: 400px;
     margin: 20px auto;
     height: 300px;
@@ -196,7 +196,7 @@ header span{
         }
 
         body{
-            background-color: black;
+            background-color: rgb(231, 213, 213);
 
         }
 
@@ -247,6 +247,8 @@ header span{
         <p>Need help finding the nearest hospital?</p>
         <button class="btn hospital-btn" onclick="findHospital()">🏥 Find Nearby Hospitals</button>
     </div>
+
+   
     <br>
     <br>
     <div class="container">
@@ -392,6 +394,16 @@ header span{
         }
     }
 </script>
+
+
+
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/@denserai/embed-chat@1/dist/web.min.js";
+    Chatbot.init({
+      chatbotId: "69e178c1-b4e4-4848-80f5-e06345b24ee8",
+    });
+  </script>  
+    
 
        
     </div>
