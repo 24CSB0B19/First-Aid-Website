@@ -75,7 +75,7 @@
     box-shadow: 0px 4px 8px rgba(8, 0, 0, 0.2);
     max-width: 400px;
     margin: 20px auto;
-    height: 300px;
+    height: 400px;
 }
 
 .container1 h1 {
@@ -210,6 +210,28 @@ header span{
             font-weight: 400;
         }
 
+        /* .drone-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 20px;
+        } */
+        .drone-btn {
+            background-color: #000;
+            color: white;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            width: 100%;
+        }
+        .drone-btn:hover {
+            background-color: #333;
+        }
+
     </style>
 </head>
 <body>
@@ -243,9 +265,12 @@ header span{
         <h1>Emergency Assistance</h1>
         <p>Click the button below to call an ambulance.</p>
         <button class="btn call-btn" onclick="callAmbulance()">🚑 Call Ambulance (108)</button>
-
         <p>Need help finding the nearest hospital?</p>
         <button class="btn hospital-btn" onclick="findHospital()">🏥 Find Nearby Hospitals</button>
+        <div class="drone-box">
+            <h2>Control Your E88 Drone</h2>
+            <button class="drone-btn" onclick="openDroneApp()">🚁 Open Drone App</button>
+        </div>
     </div>
 
    
@@ -393,6 +418,26 @@ header span{
             alert("Geolocation is not supported by your browser.");
         }
     }
+
+    function openDroneApp() {
+            // Try to open the WIFI_cam app directly
+            window.location.href = "wifi_cam://";
+
+            // If the app doesn't open, redirect to the Play Store after 3 seconds
+            setTimeout(function() {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.tzh.wifi.wificam.activity"; 
+            }, 3000);
+        }
+
+        function openDroneApp() {
+            // Try to open the WIFI_cam app directly
+            window.location.href = "https://play.google.com/store/apps/details?id=com.tzh.wifi.wificam.activity&hl=en-US";
+
+            // If the app doesn't open, redirect to the Play Store after 3 seconds
+            setTimeout(function() {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.tzh.wifi.wificam.activity&hl=en-US"; 
+            }, 3000);
+        }
 </script>
 
 
@@ -408,4 +453,4 @@ header span{
        
     </div>
 </body>
-</html>
+</html> 
