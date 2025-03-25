@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <input type="text" id="signup-username" placeholder="Username" required />
+    <input type="email" id="signup-email" placeholder="Email" required />
+    <input type="tel" id="signup-phone" placeholder="Phone Number" required />
+    <input type="password" id="signup-password" placeholder="Password" required />
+    <input type="password" id="signup-confirm" placeholder="Confirm Password" required />
+    <button onclick="signup()">Sign Up</button>
+    <div class="message" id="signup-message"></div>
+    <div class="link" onclick="location.href='login.html'">Already have an account? Login</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
