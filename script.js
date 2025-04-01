@@ -41,7 +41,7 @@ function login() {
     localStorage.setItem("loggedInUser", username);
 
     // Redirect to test.html
-    window.location.href = "test.html";
+    window.location.href = "checking.html";
   } else {
     loginMessage.textContent = "Invalid username or password.";
     loginMessage.style.color = 'red';
